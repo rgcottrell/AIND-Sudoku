@@ -3,11 +3,11 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: We first created a new function that will apply the naked twins elimination to the grid. This function ensures that we satisfy the naked twins constraint that no squares in the unit outside the two naked twins squares can contain the twin values. We then add a call to this function from the reduce_puzzle() function along with the other strategies. This is where the new constraints will be iteratively applied until all constraints have been satisfied. This iteration is important because applying the naked twins strategy could change the puzzle to a state where new eliminations, only choices, or even new naked twins become possible.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: Diagonal Sudoku introduces two new units to the list of units that must be solved. This is done by simply adding a new unit for the top left to bottom right diagonal and another unit for the bottom left to top right diagonal to the list of possible units. As a result, boxes on the main diagonals now belong to four units while the center box belongs to five. The elimination, only choice, and naked twins strategies will automatically enforce the additional constraints introduced by the new units.
 
 ### Install
 
